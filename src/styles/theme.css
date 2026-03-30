@@ -140,6 +140,12 @@
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: #f8cd02;
+    color: #1e1e1e;
   }
 
   h1 {
