@@ -1,0 +1,163 @@
+export type CatalogItem = {
+  id: number;
+  name: string;
+  slug: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  brand: string;
+  category: string;
+  material: string;
+  leadTime: string;
+  stockLabel: string;
+  rating: number;
+  reviews: number;
+  badges: string[];
+  description: string;
+  useCase: string;
+};
+
+export const catalogItems: CatalogItem[] = [
+  {
+    id: 1,
+    slug: 'uaz-handle-clip-set',
+    name: 'Клипса-заглушка облицовки ручки двери УАЗ Патриот, комплект 5 шт',
+    price: 159,
+    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'УАЗ',
+    category: 'Салон',
+    material: 'ABS',
+    leadTime: '1-2 дня',
+    stockLabel: 'Печать под заказ',
+    rating: 4.9,
+    reviews: 31,
+    badges: ['Популярное', 'Салон'],
+    description: 'Комплект крепёжных элементов для салонной обшивки и внутренней ручки двери.',
+    useCase: 'Когда штатная заглушка треснула или потерялась после разборки двери.',
+  },
+  {
+    id: 2,
+    slug: 'renault-hooks-set',
+    name: 'Крючки для вещей на ручку салона Renault / Lada / Nissan / Datsun, 4 шт',
+    price: 193,
+    originalPrice: 479,
+    image: 'https://images.unsplash.com/photo-1761319386454-7d54d5e4a89b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'RENAULT',
+    category: 'Салон',
+    material: 'PETG',
+    leadTime: '1 день',
+    stockLabel: 'Есть типовая модель',
+    rating: 4.8,
+    reviews: 18,
+    badges: ['Распродажа', 'Аксессуары'],
+    description: 'Комплект крючков для ежедневного использования без сверления и сложного монтажа.',
+    useCase: 'Подходит, если нужно аккуратно добавить точку крепления для пакетов и мелочей.',
+  },
+  {
+    id: 3,
+    slug: 'lada-granta-phone-mount',
+    name: 'Крепление для держателя телефона и беспроводной зарядки Lada Granta',
+    price: 179,
+    originalPrice: 560,
+    image: 'https://images.unsplash.com/photo-1692764449235-6c46b86ec252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'LADA',
+    category: 'Крепёж',
+    material: 'ABS',
+    leadTime: '2 дня',
+    stockLabel: 'Под заказ',
+    rating: 4.7,
+    reviews: 22,
+    badges: ['Хит', 'Гаджеты'],
+    description: 'Переходник под установку держателя телефона без грубых доработок панели.',
+    useCase: 'Когда нужен аккуратный монтаж аксессуара в конкретный интерьер автомобиля.',
+  },
+  {
+    id: 4,
+    slug: 'renault-logan-phone-mount',
+    name: 'Крепление для держателя телефона и беспроводной зарядки Renault Logan',
+    price: 179,
+    originalPrice: 560,
+    image: 'https://images.unsplash.com/photo-1692764449235-6c46b86ec252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'RENAULT',
+    category: 'Крепёж',
+    material: 'ABS',
+    leadTime: '2-3 дня',
+    stockLabel: 'Печать после подтверждения',
+    rating: 4.7,
+    reviews: 14,
+    badges: ['Заказная модель'],
+    description: 'Крепление с привязкой к геометрии Logan, рассчитанное под ежедневную нагрузку.',
+    useCase: 'Когда универсальный аксессуар выглядит чужеродно и нужен аккуратный кастом.',
+  },
+  {
+    id: 5,
+    slug: 'uaz-air-recirc-damper',
+    name: 'Заслонка рециркуляции отопителя УАЗ Патриот / УАЗ 469',
+    price: 774,
+    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'УАЗ',
+    category: 'Печка и воздуховоды',
+    material: 'ABS',
+    leadTime: '2 дня',
+    stockLabel: 'Типовая позиция',
+    rating: 4.9,
+    reviews: 11,
+    badges: ['УАЗ', 'Ремонт'],
+    description: 'Функциональная замена штатной детали для восстановления корректной работы системы отопления.',
+    useCase: 'Когда заслонка ломается и оригинал сложно или долго искать.',
+  },
+  {
+    id: 6,
+    slug: 'nika-dryer-guides',
+    name: 'Направляющие сушилки для белья Nika, ремкомплект 2 шт',
+    price: 244,
+    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'NIKA',
+    category: 'Бытовой ремонт',
+    material: 'PETG',
+    leadTime: '1 день',
+    stockLabel: 'Быстрый заказ',
+    rating: 4.8,
+    reviews: 27,
+    badges: ['Бытовой ремонт', 'Новинка'],
+    description: 'Прочный ремкомплект для восстановления бытовой сушилки без покупки новой.',
+    useCase: 'Когда проще напечатать малую деталь, чем менять всё изделие целиком.',
+  },
+  {
+    id: 7,
+    slug: 'peugeot-407-turn-signal-fix',
+    name: 'Фиксатор поворотников Peugeot 407, улучшенная версия',
+    price: 207,
+    originalPrice: 726.8,
+    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'PEUGEOT',
+    category: 'Рулевая колонка',
+    material: 'ABS',
+    leadTime: '2 дня',
+    stockLabel: 'Есть шаблон',
+    rating: 4.9,
+    reviews: 9,
+    badges: ['Улучшенная версия', 'Ремкомплект'],
+    description: 'Усиленная версия ремонтной детали для узла, который часто ломается на пробеге.',
+    useCase: 'Подходит, когда нужна точечная ремонтная запчасть без замены целого блока.',
+  },
+  {
+    id: 8,
+    slug: 'lada-granta-gear-bushing',
+    name: 'Втулка рычага кулисы переключения передач Lada Granta FL / Kalina 2',
+    price: 159,
+    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    brand: 'LADA',
+    category: 'Трансмиссия',
+    material: 'Nylon',
+    leadTime: '2-3 дня',
+    stockLabel: 'Печать и подгонка',
+    rating: 4.8,
+    reviews: 16,
+    badges: ['Точность', 'Износостойкость'],
+    description: 'Мелкая техническая деталь для восстановления чёткости работы механизма.',
+    useCase: 'Когда стандартная втулка изнашивается и нужна быстрая замена без долгого ожидания.',
+  },
+];
+
+export const catalogCategories = ['Все', ...new Set(catalogItems.map((item) => item.category))];

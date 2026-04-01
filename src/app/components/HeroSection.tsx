@@ -1,6 +1,10 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-export function HeroSection() {
+type HeroSectionProps = {
+  onOpenQuote: () => void;
+};
+
+export function HeroSection({ onOpenQuote }: HeroSectionProps) {
   return (
     <section className="overflow-hidden bg-[#f4f0e7] py-10 lg:py-14">
       <div className="mx-auto max-w-[1200px] px-4">
@@ -33,12 +37,13 @@ export function HeroSection() {
               >
                 Позвонить и обсудить заказ
               </a>
-              <a
-                href="#contact"
+              <button
+                type="button"
+                onClick={onOpenQuote}
                 className="inline-flex items-center justify-center rounded-full border border-[#1e1e1e]/10 bg-white/70 px-7 py-4 text-base font-semibold text-[#1e1e1e] backdrop-blur-xl transition-colors hover:bg-white"
               >
                 Что отправить для расчёта
-              </a>
+              </button>
             </div>
 
             <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-3">

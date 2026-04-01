@@ -1,3 +1,7 @@
+type ContactSectionProps = {
+  onOpenQuote: (defaults?: { productName?: string; carBrand?: string; quantity?: string }) => void;
+};
+
 const contactCards = [
   {
     title: 'Телефон',
@@ -13,7 +17,7 @@ const contactCards = [
   },
 ];
 
-export function ContactSection() {
+export function ContactSection({ onOpenQuote }: ContactSectionProps) {
   return (
     <section className="bg-[#111111] py-20 text-white">
       <div className="mx-auto max-w-[1200px] px-4">
@@ -42,12 +46,13 @@ export function ContactSection() {
               >
                 Позвонить сейчас
               </a>
-              <a
-                href="#catalog"
+              <button
+                type="button"
+                onClick={() => onOpenQuote()}
                 className="inline-flex items-center justify-center rounded-full border border-[#1e1e1e]/20 px-6 py-3 font-semibold text-[#1e1e1e]"
               >
-                Посмотреть направления работ
-              </a>
+                Заполнить форму расчёта
+              </button>
             </div>
           </div>
 

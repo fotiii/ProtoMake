@@ -1,4 +1,10 @@
-export function SimpleFooter() {
+type SimpleFooterProps = {
+  currentPath: string;
+};
+
+export function SimpleFooter({ currentPath }: SimpleFooterProps) {
+  const homeLink = (sectionId: string) => (currentPath === '/' ? `#${sectionId}` : `/#${sectionId}`);
+
   return (
     <footer className="bg-[#0d0d0d] py-10 text-white">
       <div className="mx-auto max-w-[1200px] px-4">
@@ -11,16 +17,16 @@ export function SimpleFooter() {
           </div>
 
           <nav className="flex flex-col gap-3 text-sm">
-            <a href="#technology" className="text-gray-400 transition-colors hover:text-[#f8cd02]">
+            <a href={homeLink('technology')} className="text-gray-400 transition-colors hover:text-[#f8cd02]">
               Технологии и подход
             </a>
-            <a href="#materials" className="text-gray-400 transition-colors hover:text-[#f8cd02]">
+            <a href={homeLink('materials')} className="text-gray-400 transition-colors hover:text-[#f8cd02]">
               Материалы и задачи
             </a>
-            <a href="#catalog" className="text-gray-400 transition-colors hover:text-[#f8cd02]">
-              Направления работ
+            <a href="/catalog" className="text-gray-400 transition-colors hover:text-[#f8cd02]">
+              Каталог-маркет
             </a>
-            <a href="#contact" className="text-gray-400 transition-colors hover:text-[#f8cd02]">
+            <a href={homeLink('contact')} className="text-gray-400 transition-colors hover:text-[#f8cd02]">
               Контакты и заявка
             </a>
           </nav>

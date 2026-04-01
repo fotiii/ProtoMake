@@ -1,4 +1,8 @@
-export function CustomOrdersSection() {
+type CustomOrdersSectionProps = {
+  onOpenQuote: () => void;
+};
+
+export function CustomOrdersSection({ onOpenQuote }: CustomOrdersSectionProps) {
   return (
     <section className="bg-[#1e1e1e] py-20">
       <div className="max-w-[1200px] mx-auto px-4">
@@ -45,12 +49,13 @@ export function CustomOrdersSection() {
                 <span className="ml-3 text-gray-300">Консультация по выбору материалов</span>
               </li>
             </ul>
-            <a 
-              href="tel:+79237496588"
+            <button
+              type="button"
+              onClick={onOpenQuote}
               className="inline-block bg-[#f8cd02] text-[#1e1e1e] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e6bd00] transition-colors"
             >
-              Заказать
-            </a>
+              Заказать расчёт
+            </button>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
